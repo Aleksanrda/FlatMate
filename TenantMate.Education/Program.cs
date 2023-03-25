@@ -1,47 +1,17 @@
-﻿string value;
+﻿using System.Diagnostics;
+using TenantMate.Education;
 
-do
+int[] nums = {1, 2, 3, 8};
+var target = 5;
+
+var solution = new Solution();
+
+var res = solution.TwoSum(nums, target);
+
+foreach (var num in res)
 {
-    int res;
+    Console.WriteLine(num);
+}
 
-    Console.WriteLine("Enter first number:");
-
-    int num1 = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Enter second number:");
-
-    int num2 = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Enter symbol(+, -, *, /):");
-
-    var symbol = Console.ReadLine();
-
-    switch (symbol)
-    {
-        case "+":
-            res = num1 + num2;
-            Console.WriteLine("Addition:" + res);
-            break;
-        case "-":
-            res = num1 - num2;
-            Console.WriteLine("Subtraction:" + res);
-            break;
-        case "*":
-            res = num1 * num2;
-            Console.WriteLine("Multiplication:" + res);
-            break;
-        case "/":
-            res = num1 / num2;
-            Console.WriteLine("Division:" + res);
-            break;
-        default:
-            Console.WriteLine("Wrong input");
-            break;
-    }
-
-    Console.ReadLine();
-
-    Console.Write("Do you want to continue(y/n):");
-    value = Console.ReadLine();
-} while (value is "y" or "Y");
+Console.ReadLine();
 
